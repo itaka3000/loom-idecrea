@@ -1,0 +1,50 @@
+@use "_variables"
+@use "_mixins"
+@use "_typography"
+
+//Generales
+body
+    font-family: typography.$font__main
+//Componentes
+// width: min(100% - 4rem, 40rem) -- Seria igual :
+.container 
+    max-width: 62rem
+    padding: 1rem
+    margin-inline: auto
+
+.image
+    display: block
+    width: 100%
+    object-fit: cover
+    object-position: center
+
+.ul-reset
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    list-style: none
+    padding: 0
+
+.link
+    display: inline-block
+    color: inherit
+    text-decoration: none
+.bold
+    font-weight: bold
+
+.button
+    display: inline-flex
+    align-items: center
+    box-sizing: border-box
+    padding: variables.$gap__xs variables.$gap__l
+    min-width: variables.$gap__l
+    width: max-content
+    background-color: variables.$color__enfasis
+    color: variables.$color__bg
+    border-radius: .3rem
+    box-shadow: 0 0 variables.$gap__xs transparentize(variables.$color__enfasis, 1)
+    @include mixins.hover()
+        background-color: variables.$color__main
+        color: variables.$color__bg
+        box-shadow: 0 0 variables.$gap__xs transparentize(variables.$color__main, 1)
+    

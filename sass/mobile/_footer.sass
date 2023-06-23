@@ -1,0 +1,35 @@
+@use "../_variables"
+
+.footer
+    background-color: variables.$color__main
+    margin-bottom: 83px
+    padding-block: variables.$gap__l
+    color: variables.$color__bg
+    .subnav
+        &__title
+            text-align: center
+            padding-block: variables.$gap__m
+            font-weight: bold
+    .nav
+        &__ul
+            flex-direction: column
+            margin: 0
+        &__link
+            display: block
+            text-align: center
+            padding-block: variables.$gap__m
+            color: variables.$color__bg
+    &__logo
+        max-width: 10rem
+        margin-block: variables.$gap__l
+        margin: auto
+    &__copy
+        margin-top: variables.$gap__xl
+        text-align: center
+
+.social
+    justify-content: center
+    gap: variables.$gap__m
+    margin-top: variables.$gap__l
+    &__icon
+        width: variables.$gap__xl
